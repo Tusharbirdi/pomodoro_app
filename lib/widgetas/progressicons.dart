@@ -11,13 +11,13 @@ class ProgressIcons extends StatelessWidget {
 
     final doneicon = Icon(
       Icons.check_circle_rounded,
-      color: Colors.orange,
+      color: Color(0xff8ee4af),
       size: iconsize,
     );
 
     final notdoneicon = Icon(
       Icons.check_circle_outline_rounded,
-      color: Colors.orange,
+      color: Color(0xff8ee4af),
       size: iconsize,
     );
 

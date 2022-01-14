@@ -24,5 +24,5 @@ const Map<PomodoroStatus, MaterialColor> statuscolor = {
   PomodoroStatus.pausedShortBreak: Colors.orange,
   PomodoroStatus.runningLongBreak: Colors.red,
   PomodoroStatus.pausedLongBreak: Colors.orange,
-  PomodoroStatus.setFinished: Colors.blue,
+  PomodoroStatus.setFinished: Colors.red,
 };

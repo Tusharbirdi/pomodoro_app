@@ -16,6 +16,8 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
+const color = Color(0xff5cdb95);
+
 const _btnTextStart = 'START POMODORO';
 const _btnTextResumePomodoro = 'RESUME POMODORO';
 const _btnTextResumeBreak = 'RESUME BREAK';
@@ -42,7 +44,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Color(0xff05386b),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -54,14 +56,14 @@ class _HomeState extends State<Home> {
                 "Pomodoro Number: $pomodoroNumber",
                 style: TextStyle(
                   fontSize: 34,
-                  color: Colors.orange[900],
+                  color: Color(0xff5cdb95),
                 ),
               ),
               Text(
                 "Set: $setNum",
                 style: TextStyle(
                   fontSize: 28,
-                  color: Colors.orange[900],
+                  color: Color(0xff5cdb95),
                 ),
               ),
               Expanded(
@@ -76,7 +78,8 @@ class _HomeState extends State<Home> {
                       progressColor: statuscolor[pomodoroStatus],
                       center: Text(
                         _secondToFormatedString(remainingTime),
-                        style: TextStyle(color: Colors.white, fontSize: 48),
+                        style:
+                            TextStyle(color: Color(0xffedf5e1), fontSize: 48),
                       ),
                     ),
                     SizedBox(
@@ -98,24 +101,39 @@ class _HomeState extends State<Home> {
                       )),
                     SizedBox(height: 10),
                     Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff5cdb95),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
                       width: 200,
-                      child: ElevatedButton(
+                      child: TextButton(
                         onPressed: _mainButtonPressed,
                         child: Text(
                           mainBtnText,
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
+                    SizedBox(height: 10),
                     Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff5cdb95),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
                       width: 200,
-                      child: ElevatedButton(
+                      child: TextButton(
                         onPressed: () {
                           _resetButtonPressed();
                         }, //mainButtonPressed,
                         child: Text(
                           _btnTextReset,
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
